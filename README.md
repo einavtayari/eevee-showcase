@@ -1,66 +1,43 @@
-# Eevee
+<h1 align="center">Eevee</h1>
 
-> **This is a showcase. The source code is private.**
-> Eevee knows a lot about one person, so the code, the memory and the configuration stay private. This page explains the design.
+<p align="center"><b>The AI assistant who asks first.</b><br>Always in my pocket, always on my side, and never acting behind my back.</p>
 
-Eevee is a personal assistant that lives on a home server and talks to me in a private Telegram chat. She answers in my own language, in her own voice. She remembers what matters, sets reminders, keeps an eye on my projects and servers, and can hand tasks to the AI sessions that build my other projects.
+> **A showcase.** The source code is private, because Eevee knows a lot about one person. This page tells the story.
 
-She started as a simple chat bridge and grew into a deputy agent with clear rules about what she may do alone and what needs my tap.
+## The right amount of help
 
-## What she does
+Most assistants either do nothing, or do too much. Eevee is built to do the right amount, and to ask when it matters.
 
-- Chats about anything, like Claude does at a desk, but from my phone.
-- Remembers durable things and preferences, and learns more the more I tell her.
-- Sets reminders and delivers them in the chat.
-- Captures ideas into the project I choose.
-- Watches the server and my projects, and warns me when something is unhealthy or a connection is about to expire. At night an alert waits until morning.
-- Takes "stop" seriously. If I say "stop telling me about this", the stop is stored in a fixed place, every proactive message is checked against it from then on, and she tells me in one line exactly what stopped.
-- Runs scheduled web research and sends me a short result.
-- Dispatches work to the AI sessions of my other projects, always through an approval tap.
+She lives on a server at home and talks to me in a private Telegram chat, in my own language and in her own voice. She started as a simple chat bridge. Today she is a deputy: she remembers, reminds, watches, researches and delegates, and she knows exactly where her authority ends.
 
-## What she will never do
+## What she does for me
 
-These four rules are the security charter, and any change that touches them stops for review.
+- **Chats about anything.** Like having Claude at my desk, but in my pocket.
+- **Remembers what matters.** Preferences, people, plans. The more I share, the better she knows me.
+- **Reminds me.** She sets a reminder and brings it back in the chat at the right moment.
+- **Catches my ideas.** I toss one in, and it lands in the right project.
+- **Keeps watch.** If a server or one of my projects looks unhealthy, or a connection is about to expire, she tells me. At night the alert waits until morning.
+- **Does the homework.** Scheduled web research, delivered as a short summary.
+- **Gets things moving.** She can hand a task to the AI sessions that build my other projects, always through an approval card.
 
-1. **Subscription only.** She refuses to start if a paid API key is present, and strips keys from every child process.
-2. **No email at all.** By my explicit choice she has no access to my mail, no drafting and no inbox watching. The only message she can send is to my own chat.
-3. **Gated actions stay gated.** Anything irreversible or aimed at a third party waits for my explicit approval, given only through my own taps in the chat.
-4. **The bridge writes the brain, not the model.** The model proposes changes in hidden blocks, and ordinary code parses, validates and performs them.
+## Why I trust her
 
-## How it is put together
+- **I tap, she acts.** Anything risky, irreversible or aimed at another person waits for my approval card. Safe and reversible things she just does, and then tells me, with proof.
+- **No email, by my choice.** She has no access to my mail. The only message she can ever send is to my own chat.
+- **Stop means stop.** If I say "stop telling me about this", it is stored, every later message is checked against it, and she tells me in one line exactly what stopped.
+- **No surprise bills.** She only ever uses my existing plan.
+- **She proposes, the system acts.** She can suggest changes to her own memory, but ordinary, checked code is what carries them out.
 
-```mermaid
-flowchart LR
-  P["Phone<br/>private Telegram chat"] <--> BR["Bridge<br/>Python"]
-  BR --> CL["Claude Code CLI<br/>headless, on a subscription"]
-  BR --> BRAIN[("Private memory")]
-  BR --> AP["Approval cards"]
-  AP --> DJ["Dispatch to project sessions"]
-  GU["Guard hook"] -. blocks forbidden commands .-> DJ
-  CR["Scheduled helpers<br/>research, disk, backups"] --> BR
-```
+## Quiet by design
 
-- **Approval cards.** Dangerous or outward-facing steps wait for a tap. Safe and reversible ones she does and then reports, with proof.
-- **A guard hook** blocks forbidden commands inside the tasks she dispatches.
-- **A disk keeper** measures quietly every day and cleans only what is safe. Anything else needs a card.
-- **A budget for news and tips.** At most one message a day and three a week, and only about ways of working that actually fit me.
-- **Self-built skills.** When she notices a routine, she builds a skill herself and tells me in one line how to undo it.
-- **Backups.** A nightly local backup with a restore check, and a backup to a private repository with a guard that blocks pushing personal data.
+A budget keeps her from nagging: at most one news or tip message a day, and only about ways of working that genuinely fit me. A nightly backup comes with a restore check, so I know it really works.
 
-## Decisions I am proud of
+## How it is made
 
-- **The model never touches the memory directly.** Hidden action blocks are parsed and stripped by code, and hidden blocks inside relayed messages are neutralised.
-- **Untrusted text stays data.** Anything she reads on a web page or in a file is treated as information, never as a command.
-- **Messages from other sessions are labelled and can never approve anything.** Approvals come only from my own taps.
+Eevee is built the same way as my other projects: a human in the loop, a team of AI agents, and a quality gate and a security gate on every change. More than two thousand automated tests keep her honest, and none of them touches a real chat, a real network or a real model.
 
-## How it is built
+## Want to see how she works?
 
-The same way as my other projects: a conductor session routes work to specialist agents, with a QA gate and a security gate on every change, and a record that is kept honest after every deploy. The test suite is hermetic, with no real network, no real chat and no real model, and has more than two thousand passing tests.
+The code is private, but I am glad to walk you through the design, in a demo or a conversation.
 
-## Stack
-
-Python, python-telegram-bot, Claude Code, systemd, Markdown memory.
-
-## Status
-
-Live and in daily use.
+<p align="center">Built by <a href="https://github.com/einavtayari">Einav</a>, the human in the loop.</p>
