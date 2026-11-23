@@ -1,49 +1,45 @@
 <h1 align="center">Eevee</h1>
 
-<p align="center"><b>The AI assistant who asks first.</b><br>Always in my pocket, always on my side, and never acting behind my back.</p>
+<p align="center"><b>A personal assistant that lives in my Telegram,<br>and knows exactly what she is not allowed to do.</b></p>
 
-> **A showcase.** The source code is private, because Eevee knows a lot about one person. This page tells the story.
+> **This is a showcase.** The source code is private, because Eevee knows a lot about one person. Here is what she does and how her limits work.
 
-## The right amount of help
-
-Most assistants either do nothing, or do too much. Eevee is built to do the right amount, and to ask when it matters.
-
-She lives on a server at home and talks to me in a private Telegram chat, in my own language and in her own voice. She started as a simple chat bridge. Today she is a deputy: she remembers, reminds, watches, researches and delegates, and she knows exactly where her authority ends.
+Eevee runs on a server at home and talks to me in a private Telegram chat, in my own language and in her own voice. She started as a simple chat bridge. Over time she turned into something closer to a deputy: she keeps track of things, watches my servers and projects, and passes work to the AI sessions that build my other apps.
 
 ## A look
 
-An illustration of how Eevee talks: a mockup, not a real conversation. A reminder, an idea caught on the fly, a "stop" that really stops, and an approval card for anything that needs my OK.
+An illustration of how Eevee talks: a mockup, not a real conversation. A reminder, an idea caught on the fly, a "stop" that really stops, and a card for anything that needs my OK.
 
 <p align="center"><img src="eevee-chat.png" alt="An illustration of a chat with Eevee: reminders, a stop request, and an approval card" width="100%"></p>
 
-## What she does for me
+## What she does
 
-- **Chats about anything.** Like having Claude at my desk, but in my pocket.
-- **Remembers what matters.** Preferences, people, plans. The more I share, the better she knows me.
-- **Reminds me.** She sets a reminder and brings it back in the chat at the right moment.
-- **Catches my ideas.** I toss one in, and it lands in the right project.
-- **Keeps watch.** If a server or one of my projects looks unhealthy, or a connection is about to expire, she tells me. At night the alert waits until morning.
-- **Does the homework.** Scheduled web research, delivered as a short summary.
-- **Gets things moving.** She can hand a task to the AI sessions that build my other projects, always through an approval card.
+- **Chats about anything,** like having Claude at my desk, but in my pocket.
+- **Remembers** preferences, people and plans. The more I tell her, the better she knows me.
+- **Reminds me** when I asked her to.
+- **Files my ideas** into the right project when I toss one into the chat.
+- **Watches** my servers and projects, and warns me when something is unhealthy or a connection is about to expire. If it happens at night, the alert waits until morning.
+- **Researches** on a schedule I set, and sends a short summary.
+- **Gets work moving** by handing a task to the AI sessions that build my other projects, always through an approval card.
 
-## Why I trust her
+## Her limits are the point
 
-- **I tap, she acts.** Anything risky, irreversible or aimed at another person waits for my approval card. Safe and reversible things she just does, and then tells me, with proof.
-- **No email, by my choice.** She has no access to my mail. The only message she can ever send is to my own chat.
-- **Stop means stop.** If I say "stop telling me about this", it is stored, every later message is checked against it, and she tells me in one line exactly what stopped.
-- **No surprise bills.** She only ever uses my existing plan.
-- **She proposes, the system acts.** She can suggest changes to her own memory, but ordinary, checked code is what carries them out.
+- **She cannot read my email.** I took that away on purpose, and she has no way to get it back on her own. The only message she can ever send is to me.
+- **Anything risky or permanent comes as a card** with two buttons, Approve and Not now. Safe and reversible things she just does, and then tells me what she did.
+- **"Stop" means stop.** If I say "stop telling me about this", the stop is stored, everything she sends afterwards is checked against it, and she tells me in one line exactly what stopped, so I can correct her if she misunderstood.
+- **She cannot surprise me with a bill.** She only ever runs on the plan I already pay for.
+- **She suggests, the system acts.** She can propose a change to her own memory, but ordinary, tested code decides what actually gets written.
 
 ## Quiet by design
 
-A budget keeps her from nagging: at most one news or tip message a day, and only about ways of working that genuinely fit me. A nightly backup comes with a restore check, so I know it really works.
+At most one news or tip message a day, and only about ways of working that really fit me. A nightly backup comes with a restore check, because a backup nobody has tried to restore is only a hope.
 
-## How it is made
+## How I built her
 
-Eevee is built the same way as my other projects: a human in the loop, a team of AI agents, and a quality gate and a security gate on every change. More than two thousand automated tests keep her honest, and none of them touches a real chat, a real network or a real model.
+The same way as my other projects: a team of AI agents, a human in the loop, and a quality check and a security check on every change. More than two thousand automated tests keep her honest, and none of them touches a real chat, a real network or a real model.
 
 ## Want to see how she works?
 
-The code is private, but I am glad to walk you through the design, in a demo or a conversation.
+The code stays private, but I am happy to walk you through her design, live.
 
 <p align="center">Built by <a href="https://github.com/einavtayari">Einav</a>, the human in the loop.</p>
