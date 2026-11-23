@@ -4,7 +4,7 @@
 
 > **This is a showcase.** The source code is private, because Eevee knows a lot about one person. Here is what she does and how her limits work.
 
-Eevee runs on a server at home and talks to me in a private Telegram chat, in my own language and in her own voice. She started as a simple chat bridge. Over time she turned into something closer to a deputy: she keeps track of things, watches my servers and projects, and passes work to the AI sessions that build my other apps.
+Eevee talks to me in a private Telegram chat, in my own language and in her own voice. She started as a simple chat bridge. Over time she turned into something closer to a deputy: she keeps track of things, watches my servers and projects, and passes work to the AI sessions that build my other apps.
 
 ## A look
 
@@ -32,7 +32,7 @@ An illustration of how Eevee talks: a mockup, not a real conversation. A reminde
 
 ## Quiet by design
 
-At most one news or tip message a day, and only about ways of working that really fit me. A nightly backup comes with a restore check, because a backup nobody has tried to restore is only a hope.
+At most one news or tip message a day, and only about ways of working that really fit me. A nightly backup comes with a restore check, so I know it really works.
 
 ## How I built her
 
