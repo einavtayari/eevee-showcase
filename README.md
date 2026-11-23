@@ -10,6 +10,12 @@ Most assistants either do nothing, or do too much. Eevee is built to do the righ
 
 She lives on a server at home and talks to me in a private Telegram chat, in my own language and in her own voice. She started as a simple chat bridge. Today she is a deputy: she remembers, reminds, watches, researches and delegates, and she knows exactly where her authority ends.
 
+## A look
+
+An illustration of how Eevee talks: a mockup, not a real conversation. A reminder, an idea caught on the fly, a "stop" that really stops, and an approval card for anything that needs my OK.
+
+<p align="center"><img src="eevee-chat.png" alt="An illustration of a chat with Eevee: reminders, a stop request, and an approval card" width="100%"></p>
+
 ## What she does for me
 
 - **Chats about anything.** Like having Claude at my desk, but in my pocket.
